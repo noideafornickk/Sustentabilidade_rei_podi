@@ -1,0 +1,155 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    color: white;
+}
+
+header, footer {
+    background-size: cover;
+    background-position: center;
+    color: rgb(229, 243, 229);
+    text-align: center;
+    padding: 100px 20px;
+    position: relative;
+    background-repeat: no-repeat;
+}
+
+header {
+    background-image: url('header.jpg');
+}
+
+footer {
+    background-image: url('footer.jpg');
+}
+
+header::before, footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header h1, footer p {
+    position: relative;
+    z-index: 2;
+}
+footer a{
+    position: relative;
+    z-index: 2;
+}
+
+#git{
+    z-index: 0;
+    margin: 30px;
+    background-color: rgba(63, 170, 63, 0.377);
+    border-radius: 100px    
+    
+}
+section {
+    padding: 100px 20px;
+    background-image: url('section.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    color: rgb(204, 241, 215);
+    background-repeat: no-repeat;
+}
+
+.sustainability-tips {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.sustainability-tips h2, .sustainability-tips h3 {
+    text-align: center;
+}
+
+.tip {
+    margin-bottom: 40px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.tip img {
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.tip:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.tip-text {
+    flex: 1;
+}
+
+.tip-text h3 {
+    margin-bottom: 10px;
+}
+
+.tip-text p {
+    margin: 0;
+}
+p.nao{
+    text-align: center;
+}
+#nao{
+    justify-content: center;
+    text-align: center;
+    flex: auto;
+
+}
+
+@media (max-width: 768px) {
+    header, footer, section {
+        background-size: cover;
+    }
+    
+    .tip img {
+        width: 100%; /* Imagem ocupa 100% da largura da tela */
+        height: auto; /* Altura automática para manter a proporção */
+        margin-bottom: 10px;
+        margin: auto;
+       
+    }
+
+    .tip {
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+    }
+
+    .tip-text {
+        text-align: center;
+        width: 100%;
+    }
+}
+
+.swap-button {
+    display: block;
+    margin: 30px auto;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.swap-button:hover {
+    background-color: #45a049;
+}
